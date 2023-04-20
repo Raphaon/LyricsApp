@@ -7,6 +7,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  isOpen:boolean =false;
+  tasks:any[] =[]; 
+  newTask: string ="Undefine Task !";
   constructor() {}
 
+  addNewTask(){
+    
+    var task = {
+      id:'NotDefine',
+      isChecked:false,
+      content: this.newTask
+    } 
+    this.newTask ="";
+    this.tasks.push(task);
+  }
 }
